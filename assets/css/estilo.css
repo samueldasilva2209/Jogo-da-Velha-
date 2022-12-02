@@ -1,0 +1,22 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#jogo{
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#jogo>div{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 4px;
+}
