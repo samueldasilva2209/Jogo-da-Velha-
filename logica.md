@@ -19,3 +19,7 @@
 - 123 , 456 , 789 
 - 147, 258 , 369
 - 159 , 357
+
+
+- logica para quando dar velha 
+- não permitir que o quadrante seja clicado varias vezes
