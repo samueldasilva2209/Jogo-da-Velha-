@@ -11,9 +11,10 @@ body{
    
 }
 #jogadores{ 
-    width: 900px;
-    font-size: 2rem;
+    width: 90%;
+    font-size: 1.8rem;
     display: flex;
+    text-align: center;
     margin-bottom: 30px;
     justify-content: space-around;
 }
@@ -38,7 +39,8 @@ body{
 }
 #win{
     margin-top: 20px;
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
 }
 img{
     width: 90px;
