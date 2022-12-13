@@ -1,8 +1,3 @@
-function alerta(){
-    alert('ddd')
-}
-
-
 
 let jogador = 1; 
 
@@ -25,7 +20,6 @@ function clique(elemento){
     
     elemento.disabled = true ;
     const quadrante  = elemento.attributes.quadrante.value ;
-    const icone = document.createElement('img'); 
     
     if(jogador == 1){
         
@@ -58,35 +52,53 @@ function clique(elemento){
 
 };
 
+
+function desativarBt(){
+    const botoes = document.querySelectorAll("button"); 
+
+    botoes.forEach(function(elemento){
+        elemento.disabled = true ;
+    })
+}
+
 function vencedor(arr){
 
     const win = document.querySelector('#win'); 
   
-
-    
     if(arr.includes('1') && arr.includes('2') && arr.includes('3')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     }
     else if(arr.includes('4') && arr.includes('5') && arr.includes('6')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     } 
     else if(arr.includes('7') && arr.includes('8') && arr.includes('9')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     } 
     else if(arr.includes('1') && arr.includes('5') && arr.includes('9')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     } 
     else if(arr.includes('3') && arr.includes('5') && arr.includes('7')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     }
     else if(arr.includes('1') && arr.includes('4') && arr.includes('7')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     } 
     else if(arr.includes('2') && arr.includes('5') && arr.includes('8')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     } 
     else if(arr.includes('3') && arr.includes('6') && arr.includes('9')){
         win.innerHTML = `vitória do ${arr[0]}`
+        desativarBt()
     } 
 
+    
 }
+
+
