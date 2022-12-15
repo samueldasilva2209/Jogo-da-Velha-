@@ -6,7 +6,6 @@ let quadrantesJ2 = ['jogador 2'];
 
 const elementos = document.querySelectorAll('#jogo>button');
 
-
 elementos.forEach(function(elemento , id){
     if(id % 2 == 1){
    elemento.style.backgroundColor = 'gray'
@@ -14,51 +13,38 @@ elementos.forEach(function(elemento , id){
     
 })
 
-
-
 function clique(elemento){
     
     elemento.disabled = true ;
     const quadrante  = elemento.attributes.quadrante.value ;
     
     if(jogador == 1){
-        
         elemento.innerHTML = 'x'
         elemento.style.color = 'red'
         quadrantesJ1.push(quadrante)
-        vencedor(quadrantesJ1)
-        
-        
-        
+        vencedor(quadrantesJ1)  
     }
     
     if(jogador == 2){
-       
         elemento.innerHTML = 'o'
         elemento.style.color = 'blue'
         quadrantesJ2.push(quadrante)
-        vencedor(quadrantesJ2)
-        
-       
-        
+        vencedor(quadrantesJ2)       
     }
-
-    
     jogador == 1 ? jogador = 2: jogador = 1   
     
-   
-    
-    
-
 };
 
 
 function desativarBt(){
     const botoes = document.querySelectorAll("button"); 
+    const btJoogarNovamente = document.querySelector('#again')
 
     botoes.forEach(function(elemento){
         elemento.disabled = true ;
     })
+
+    btJoogarNovamente.style.display = 'block';
 }
 
 function vencedor(arr){
@@ -97,8 +83,14 @@ function vencedor(arr){
         win.innerHTML = `vitória do ${arr[0]}`
         desativarBt()
     } 
+    else if(quadrantesJ1.length == 6){
+        win.innerHTML = `Deu velha`
+        desativarBt()
+    }
 
     
 }
 
-
+const jogarNovamente = () => {
+    location.reload()
+}
