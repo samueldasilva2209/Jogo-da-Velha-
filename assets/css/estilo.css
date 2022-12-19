@@ -13,12 +13,16 @@ body{
    
 }
 #jogadores{ 
-    width: 50%;
+    max-width: 700px ;
     font-size: 1.7rem;
     display: flex;
     text-align: center;
     margin-bottom: 15px;
     justify-content: space-around;
+}
+#jogadores div{
+    margin: 40px 40px 0px 40px;
+    
 }
 
 #jogo{
@@ -65,4 +69,22 @@ img{
 
 #again:hover{
     background-color: rgba(101, 99, 99, 0.991);
+}
+
+@media screen and (max-width: 500px ){
+
+
+    html{ 
+        font-size: 14px;
+    }
+    #jogo{
+        width: 250px;
+    }
+    #jogo>button{
+        width: 70px;
+        height: 70px;
+        font-size: 3rem;
+    }
+
+
 }
