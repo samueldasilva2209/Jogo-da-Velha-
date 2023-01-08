@@ -6,12 +6,6 @@ let quadrantesJ2 = ['jogador 2'];
 
 const elementos = document.querySelectorAll('#jogo>button');
 
-elementos.forEach(function(elemento , id){
-    if(id % 2 == 1){
-   elemento.style.backgroundColor = 'gray'
-    }
-    
-})
 
 function clique(elemento){
     

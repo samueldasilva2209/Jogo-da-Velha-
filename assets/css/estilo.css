@@ -44,6 +44,9 @@ body{
     cursor: pointer;
    
 }
+#jogo button:nth-of-type(2n){
+    background-color: rgb(142, 142, 142);
+}
 #win{
     margin-top: 5px;
     font-size: 1.6rem;
