@@ -5,7 +5,15 @@ let quadrantesJ1 = ['jogador 1'];
 let quadrantesJ2 = ['jogador 2']; 
 
 const elementos = document.querySelectorAll('#jogo>button');
-
+const mudaCor = (jogador) => { 
+    if(jogador == 1){
+        document.querySelector('.play-1').style.color = 'white'
+        document.querySelector('.play-2').style.color = 'blue'
+    }else{
+        document.querySelector('.play-2').style.color = 'white'
+        document.querySelector('.play-1').style.color = 'red'
+    }
+}
 
 function clique(elemento){
     
@@ -16,14 +24,17 @@ function clique(elemento){
         elemento.innerHTML = 'x'
         elemento.style.color = 'red'
         quadrantesJ1.push(quadrante)
-        vencedor(quadrantesJ1)  
+        vencedor(quadrantesJ1) 
+        mudaCor(jogador) 
+
     }
     
     if(jogador == 2){
         elemento.innerHTML = 'o'
         elemento.style.color = 'blue'
         quadrantesJ2.push(quadrante)
-        vencedor(quadrantesJ2)       
+        vencedor(quadrantesJ2) 
+        mudaCor(jogador)      
     }
     jogador == 1 ? jogador = 2: jogador = 1   
     

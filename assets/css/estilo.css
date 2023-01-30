@@ -24,6 +24,9 @@ body{
     margin: 40px 40px 0px 40px;
     
 }
+#jogadores .play-1{
+    color:red
+}
 
 #jogo{
     display: flex;
